@@ -1,18 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\pblcontroller;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('start',[pblcontroller::class,'start']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//OC参加者画面
+Route::get('participant',[pblcontroller::class,'participant']);
