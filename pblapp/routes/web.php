@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pblcontroller;
 
-Route::get('start',[pblcontroller::class,'start']);
+Route::get('login',[pblcontroller::class,'login']);
 
 //OC参加者画面
 Route::get('participant',[pblcontroller::class,'participant']);
