@@ -12,7 +12,7 @@ class pblcontroller extends Controller
     }
 
     public function participant(){
-        return view('participant');
+        return view('student.participant');
 
     }
 }
