@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class pblcontroller extends Controller
 {
     public function login(){
-        return view('login');
+        return view('teacher.login');
 
     }
 
