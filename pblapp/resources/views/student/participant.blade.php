@@ -4,5 +4,5 @@
 <p>コンテンツです</p>
 @endsection
 @section('footer')
-<p>フッターです</p>
+
 @endsection
