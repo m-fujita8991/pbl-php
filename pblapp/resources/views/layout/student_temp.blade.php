@@ -5,8 +5,8 @@
 </head>
 <body>
   <div class = "header">
-  <img src="image/start2.jpg"style="width: 100%">
-  <p>@yield('title')<p>
+    <img src="image/start2.jpg"style="width: 100%">
+    <p>@yield('title')</p>
   </div>
   @yield('content')
     <footer>
