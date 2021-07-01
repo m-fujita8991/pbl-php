@@ -10,4 +10,9 @@ class teacherController extends Controller
         return view('teacher.login');
 
     }
+
+    public function list(){
+        return view('teacher.list');
+
+    }
 }
