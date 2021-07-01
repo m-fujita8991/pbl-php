@@ -6,4 +6,4 @@
   <p>Password :<input type="text" name="password" value=""></p>
   <input type="submit" value="login">
 @endsection
-@section('footer','PBL7')
+@section('footer','')
