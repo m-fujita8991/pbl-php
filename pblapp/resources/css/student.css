@@ -30,8 +30,10 @@ body {
 
   .next {
     position: fixed;
-    bottom: 20px;
+    bottom: 50px;
     right: 10px;
+    width: 50px;
+    height: 50px;
      
     border:1px solid #888888;
     padding:2pt;
@@ -50,7 +52,7 @@ body {
    
    .back {
     position: fixed;
-    bottom: 20px;
+    bottom: 50px;
     left: 10px;
      
     border:1px solid #888888;
@@ -67,3 +69,4 @@ body {
     -webkit-border-radius: 3px; 
     -moz-border-radius: 3px;
    }
+   
