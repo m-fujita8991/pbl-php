@@ -10,4 +10,9 @@ class pblcontroller extends Controller
         return view('student.questionnaire');
 
     }
+
+    public function participant2(){
+        return view('student.questionnaire2');
+
+    }
 }

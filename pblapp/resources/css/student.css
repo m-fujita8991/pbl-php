@@ -28,45 +28,4 @@ body {
     bottom: 0; /*下に固定*/
   }
 
-  .next {
-    position: fixed;
-    bottom: 50px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-     
-    border:1px solid #888888;
-    padding:2pt;
-    background-color: #ffffff;
-    filter:alpha(opacity=85);
-    -moz-opacity:0.85;
-    -khtml-opacity: 0.85;
-    opacity:0.85;
-        
-    text-shadow: 0 -1px 1px #FFF, -1px 0 1px #FFF, 1px 0 1px #aaa; 
-    -webkit-box-shadow: 1px 1px 2px #E7E7E7;
-    -moz-box-shadow: 1px 1px 2px #E7E7E7; 
-    -webkit-border-radius: 3px; 
-    -moz-border-radius: 3px;
-   }
-   
-   .back {
-    position: fixed;
-    bottom: 50px;
-    left: 10px;
-     
-    border:1px solid #888888;
-    padding:2pt;
-    background-color: #ffffff;
-    filter:alpha(opacity=85);
-    -moz-opacity:0.85;
-    -khtml-opacity: 0.85;
-    opacity:0.85;
-        
-    text-shadow: 0 -1px 1px #FFF, -1px 0 1px #FFF, 1px 0 1px #aaa; 
-    -webkit-box-shadow: 1px 1px 2px #E7E7E7;
-    -moz-box-shadow: 1px 1px 2px #E7E7E7; 
-    -webkit-border-radius: 3px; 
-    -moz-border-radius: 3px;
-   }
    

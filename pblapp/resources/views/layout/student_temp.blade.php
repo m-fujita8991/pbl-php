@@ -11,8 +11,8 @@
   @yield('content')
     <footer>
     <div class = 'footer'></div>
-    <div class = 'next'><a href="#footer">決定</a></div>
-    <div class = 'back'><a href="#footer">戻る</a></div>
+    <button onclick="location.href='participant2'" style="position: absolute; right: 20px; bottom: 10px">決定</button></div>
+    <button onclick="history.back()" >戻る</button></div>
       @yield('footer')
     </footer>
 </body>

@@ -11,3 +11,5 @@ Route::get('list',[teachercontroller::class,'list']);
 //OC参加者画面
 Route::get('participant',[pblcontroller::class,'participant']);
 
+//OCアンケート画面
+Route::get('participant2',[pblcontroller::class,'participant2']);
