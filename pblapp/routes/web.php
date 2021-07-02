@@ -5,7 +5,10 @@ use App\Http\Controllers\pblcontroller;
 use App\Http\Controllers\teachercontroller;
 
 //教員
+//login
 Route::get('login',[teachercontroller::class,'login']);
+
+//list
 Route::get('list',[teachercontroller::class,'list']);
 
 //OC参加者画面
