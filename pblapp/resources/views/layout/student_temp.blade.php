@@ -9,6 +9,6 @@
     <p>@yield('title')</p>
   </div>
   @yield('content')
-      @yield('footer')
+  @yield('footer')
 </body>
 </html>
