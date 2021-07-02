@@ -20,4 +20,9 @@ class pblcontroller extends Controller
         return view('student.sankasyaNo');
 
     }
+
+    public function sankahyou(){
+        return view('student.sankahyou');
+
+    }
 }

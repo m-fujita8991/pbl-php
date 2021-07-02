@@ -11,7 +11,7 @@
 @section('footer')
 <footer>
     <div class = 'footer'></div>
-    <button onclick="location.href=''" style="position: absolute; right: 20px; bottom: 10px">決定</button></div>
+    <button onclick="location.href='sankahyou'" style="position: absolute; right: 20px; bottom: 10px">決定</button></div>
     <button onclick="history.back()" >戻る</button></div>
     </footer>
 @endsection
