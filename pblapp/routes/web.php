@@ -13,3 +13,6 @@ Route::get('participant',[pblcontroller::class,'participant']);
 
 //OCアンケート画面
 Route::get('participant2',[pblcontroller::class,'participant2']);
+
+//参加者No　入力画面
+Route::get('sankasyaNo',[pblcontroller::class,'sankasyaNo']);
