@@ -4,12 +4,12 @@ venderはコミットしない
 
 パスはpublicからみてどこか
 
-db共有方法
+## db共有方法
 
-エクスポート
+### エクスポート
 
 phpmyadmin→oicoc→エクスポート→詳細→DROP TABLE~とCREATE PROCEDURE~にチェックで実行
 
-インポート
+### インポート
 
 zipを選択、実行
