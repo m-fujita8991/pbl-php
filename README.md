@@ -8,7 +8,7 @@ venderはコミットしない
 
 ### エクスポート
 
-phpmyadmin→oicoc→エクスポート→詳細→DROP TABLE~とCREATE PROCEDURE~にチェックで実行
+phpmyadmin→oicoc→エクスポート→詳細→DROP TABLE～とCREATE PROCEDURE～にチェックで実行
 
 ### インポート
 
