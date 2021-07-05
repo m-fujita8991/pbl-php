@@ -1,5 +1,5 @@
 @extends('layout.teacher_temp')
-@section('title','confirm')
+@section('title','score')
 @section('content')
     <p>参加者No <input type="text" name="sankaNo" value=""></p>
     <p>　　名前 <input type="text" name="name" value=""></p>

@@ -20,4 +20,9 @@ class teacherController extends Controller
         return view('teacher.confirm');
 
     }
+
+    public function score(){
+        return view('teacher.score');
+
+    }
 }

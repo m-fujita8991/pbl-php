@@ -60,5 +60,5 @@ tabs[0].onclick();
 @section('footer','')
 <footer>
    <div class = 'footer'></div>
-   <button onclick="history.back()" >戻る</button></div>
+   <button onclick="history.back()" >戻る</button>
 </footer>

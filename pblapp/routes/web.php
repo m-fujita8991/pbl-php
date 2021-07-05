@@ -11,6 +11,8 @@ Route::get('login',[teachercontroller::class,'login']);
 Route::get('list',[teachercontroller::class,'list']);
 //confirm
 Route::get('confirm',[teachercontroller::class,'confirm']);
+//score
+Route::get('score',[teachercontroller::class,'score']);
 
 //OC参加者画面
 Route::get('participant',[pblcontroller::class,'participant']);
