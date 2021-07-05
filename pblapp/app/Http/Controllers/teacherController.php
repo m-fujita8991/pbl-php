@@ -15,4 +15,9 @@ class teacherController extends Controller
         return view('teacher.list');
 
     }
+
+    public function confirm(){
+        return view('teacher.confirm');
+
+    }
 }
