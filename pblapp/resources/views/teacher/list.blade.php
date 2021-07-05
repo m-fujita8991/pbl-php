@@ -1,61 +1,30 @@
 @extends('layout.teacher_temp')
 @section('title','list')
 @section('content')
-<p id="tabcontrol">
-   <a href="#tabpage1">参加者一覧</a>
-   <a href="#tabpage2">人数集約</a>
-</p>
-<div id="tabbody">
-   <div id="tabpage1">…… タブ1の中身 ……</div>
-   <div id="tabpage2">…… タブ2の中身 ……</div>
+<input type="date">
+<div class="tab_wrap">
+	<input id="tab1" type="radio" name="tab_btn" checked>
+	<input id="tab2" type="radio" name="tab_btn">
+	<input id="tab3" type="radio" name="tab_btn">
+
+	<div class="tab_area">
+		<label class="tab1_label" for="tab1">tab1</label>
+		<label class="tab2_label" for="tab2">tab2</label>
+		<label class="tab3_label" for="tab3">tab3</label>
+	</div>
+	<div class="panel_area">
+		<div id="panel1" class="tab_panel">
+			<p>panel1</p>
+		</div>
+		<div id="panel2" class="tab_panel">
+			<p>panel2</p>
+		</div>
+		<div id="panel3" class="tab_panel">
+			<p>panel3</p>
+		</div>
+	</div>
 </div>
-<script type="text/javascript">
-// ---------------------------
-// A：対象要素を得る
-// ---------------------------
-var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
-var pages = document.getElementById('tabbody').getElementsByTagName('div');
 
-// ---------------------------
-// B：タブの切り替え処理
-// ---------------------------
-function changeTab() {
-   // B-1. href属性値から対象のid名を抜き出す
-   var targetid = this.href.substring(this.href.indexOf('#')+1,this.href.length);
-
-   // B-2. 指定のタブページだけを表示する
-   for(var i=0; i<pages.length; i++) {
-      if( pages[i].id != targetid ) {
-         pages[i].style.display = "none";
-      }
-      else {
-         pages[i].style.display = "block";
-      }
-   }
-
-   // B-3. クリックされたタブを前面に表示する
-   for(var i=0; i<tabs.length; i++) {
-      tabs[i].style.zIndex = "0";
-   }
-   this.style.zIndex = "10";
-
-   // B-4. ページ遷移しないようにfalseを返す
-   return false;
-}
-
-// ---------------------------
-// C：すべてのタブに対して、クリック時にchangeTab関数が実行されるよう指定する
-// ---------------------------
-for(var i=0; i<tabs.length; i++) {
-   tabs[i].onclick = changeTab;
-}
-
-// ---------------------------
-// D：最初は先頭のタブを選択しておく
-// ---------------------------
-tabs[0].onclick();
-
-</script>
 @endsection
 @section('footer','')
 <footer>

@@ -23,37 +23,27 @@ h1 {
   color: white;
 }
 
-/*list.blade.php*/
-/* タブ */
-#tabcontrol a {
-  display: inline-block;            /* インラインブロック化 */
-  border-width: 1px 1px 0px 1px;    /* 下以外の枠線を引く */
-  border-style: solid;              /* 枠線の種類：実線 */
-  border-color: black;              /* 枠線の色：黒色 */
-  border-radius: 0.75em 0.75em 0 0; /* 枠線の左上角と右上角だけを丸く */
-  padding: 0.75em 1em;              /* 内側の余白 */
-  text-decoration: none;            /* リンクの下線を消す */
-  color: black;                     /* 文字色：黒色 */
-  background-color: white;          /* 背景色：白色 */
-  font-weight: bold;                /* 太字 */
-  position: relative;               /* JavaScriptでz-indexを調整するために必要 */
-}
-/* タブにマウスポインタが載った際(任意) */
-#tabcontrol a:hover {
-  text-decoration: underline;       /* 文字に下線を引く */
-}
+/* .tab_wrap{width:500px; margin:80px auto;}
+.tab_area{font-size:0; margin:0 10px;}
+.tab_area label{width:150px; margin:0 5px; display:inline-block; padding:12px 0; color:#999; background:#ddd; text-align:center; font-size:13px; cursor:pointer; transition:ease 0.2s opacity;}
+.tab_area label:hover{opacity:0.5;}
+.panel_area{background:#fff;}
+.tab_panel{width:100%; padding:80px 0; display:none;}
+.tab_panel p{font-size:14px; letter-spacing:1px; text-align:center;} */
 
-/* タブの中身 */
-#tabbody div {
-  border: 1px solid black; /* 枠線：黒色の実線を1pxの太さで引く */
-  margin-top: -1px;        /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
-  padding: 1em;            /* 内側の余白量 */
-  background-color: white; /* 背景色：白色 */
-  position: relative;      /* z-indexを調整するために必要 */
-  z-index: 0;              /* 重なり順序を「最も背面」にするため */
-}
+input[type="radio"]{display:none;}
 
-/* タブの配色 */
-#tabcontrol a:nth-child(1), #tabbody div:nth-child(1) { background-color: #ffffdd; }/* 1つ目のタブとその中身用の配色 */
-#tabcontrol a:nth-child(2), #tabbody div:nth-child(2) { background-color: #ddffdd; }/* 2つ目のタブとその中身用の配色 */
-#tabcontrol a:nth-child(3), #tabbody div:nth-child(3) { background-color: #ddddff; }/* 3つ目のタブとその中身用の配色 */
+.tab_wrap{width:470px; margin:80px auto;}
+.tab_area{font-size:0; padding:0 55px;}
+.tab_area label{width:110px; display:inline-block; padding:14px 0 12px; color:#fff; background:#90c9cc; text-align:center; font-size:13px; cursor:pointer; transition:ease 0.2s opacity; border-top-left-radius:10px; border-top-right-radius:10px; vertical-align:bottom; transition:ease 0.2s; margin:10px 5px 0;}
+.tab_area label:hover{opacity:0.5;}
+.tab_panel{width:100%; padding:80px 0; opacity:0; display:none;}
+.tab_panel p{font-size:14px; letter-spacing:1px; text-align:center;}
+.panel_area{background:#ffffff; border-bottom-right-radius:10px; border-bottom-left-radius:10px; border-top:8px solid #d7e9ea;}
+
+#tab1:checked ~ .tab_area .tab1_label{background:#fff; color:#000;}
+#tab1:checked ~ .panel_area #panel1{display:block;}
+#tab2:checked ~ .tab_area .tab2_label{background:#fff; color:#000;}
+#tab2:checked ~ .panel_area #panel2{display:block;}
+#tab3:checked ~ .tab_area .tab3_label{background:#fff; color:#000;}
+#tab3:checked ~ .panel_area #panel3{display:block;}
