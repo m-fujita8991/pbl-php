@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Login extends Model
 {
+    protected $table = 'TBL_login';
     use HasFactory;
 }
