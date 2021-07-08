@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cnt extends Model
 {
+    protected $table = 'TBL_cnt';
     use HasFactory;
 }

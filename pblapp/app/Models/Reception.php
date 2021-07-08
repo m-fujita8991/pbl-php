@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reception extends Model
 {
+    protected $table = 'TBL_reception';
     use HasFactory;
 }
