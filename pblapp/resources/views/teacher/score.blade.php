@@ -2,7 +2,8 @@
 @section('title','score')
 @section('content')
     <p>　　名前 <input type="text" name="name" value=""></p>
-    <p>参加者メモ <input type="text" name="note" value=""></p>
+    <p>　　参加者メモ</p>
+    <textarea name="note"></textarea>
     <p>1. 　　　　　　　　　　<select name="item1">
         <option value='score1'>2</option>
         <option value='score2'>4</option>
@@ -33,7 +34,8 @@
         <option value='score3'>6</option>
         <option value='score4'>8</option>
     </select></p>
-    <p>不合格の理由を記入してください <input type="text" name="reason" value=""></p>
+    <p>不合格の理由を記入してください</p>
+    <textarea name="reason"></textarea>
 @endsection
 @section('footer','')
 <footer>
