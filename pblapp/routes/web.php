@@ -14,6 +14,9 @@ Route::get('confirm',[teachercontroller::class,'confirm']);
 //score
 Route::get('score',[teachercontroller::class,'score']);
 
+
+
+//参加者
 //OC参加者画面
 Route::get('participant',[pblcontroller::class,'participant']);
 
@@ -25,3 +28,15 @@ Route::get('sankasyaNo',[pblcontroller::class,'sankasyaNo']);
 
 //参加票　入力画面
 Route::get('sankahyou',[pblcontroller::class,'sankahyou']);
+
+//参加票　確認画面
+Route::get('sankahyoukakunin',[pblcontroller::class,'sankahyoukakunin']);
+
+//交通費対象選択画面
+Route::get('koutuuhi',[pblcontroller::class,'koutuuhi']);
+
+//受付終了画面（交通費対象）
+Route::get('uketukeowari',[pblcontroller::class,'uketukeowari']);
+
+//交通費対象選択画面　（交通費対象外）
+Route::get('uketukeowari2',[pblcontroller::class,'uketukeowari2']);
