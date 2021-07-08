@@ -9,4 +9,11 @@ class Area extends Model
 {
     protected $table = 'TBL_area';
     use HasFactory;
+    
+    public function getArea(){
+        return $this->area;
+    }
+    public function getFlag(){
+        return $this->flag;
+    }
 }
