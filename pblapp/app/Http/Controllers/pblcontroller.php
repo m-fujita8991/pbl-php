@@ -27,7 +27,7 @@ class pblcontroller extends Controller
             $data = ['msg'=>'近くの職員にお知らせください',];
             return view('student.questionnaire_results',$data);
         }else{
-            $data = ['msg'=>'',];
+            return view('student.sankasyaNo');
         }
         
     }
