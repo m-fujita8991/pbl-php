@@ -1,5 +1,6 @@
 <html>
 <head>
+  @yield('header')
   <link rel="stylesheet" href="../resources/css/student.css">
   <title>@yield('title')</title>
 </head>
