@@ -25,10 +25,11 @@ class pblcontroller extends Controller
         $value = $request->student;
         if($value == 1){
             $data = ['msg'=>'近くの職員にお知らせください',];
+            return view('student.questionnaire_results',$data);
         }else{
             $data = ['msg'=>'',];
         }
-        return view('student.questionnaire_results',$data);
+        
     }
 
     public function sankasyaNo(){

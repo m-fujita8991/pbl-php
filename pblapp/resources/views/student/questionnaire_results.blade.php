@@ -11,7 +11,10 @@
 @endsection
 @section('content')
     <p class ="alert">{{$msg}}</p>
-@endsection
+    <form>
+    <input type="checkbox" style="width:40px; height:40px;" value="1">確認しました。
+    </form>
+    @endsection
 @section('footer')
 
 @endsection
