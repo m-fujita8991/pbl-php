@@ -21,10 +21,10 @@ Route::get('score',[teachercontroller::class,'score']);
 Route::get('participant',[pblcontroller::class,'participant']);
 
 //OCアンケート画面
-Route::get('participant2',[pblcontroller::class,'participant2']);
+Route::post('participant2',[pblcontroller::class,'participant2']);
 
 //アンケート結果
-Route::get('questionnaire_results',[pblcontroller::class,'questionnaire_results']);
+Route::post('questionnaire_results',[pblcontroller::class,'questionnaire_results']);
 
 //参加者No　入力画面
 Route::get('sankasyaNo',[pblcontroller::class,'sankasyaNo']);

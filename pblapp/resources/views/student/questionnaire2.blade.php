@@ -1,7 +1,7 @@
 @extends('layout.student_temp')
 @section('title','アンケート')
 @section('content')
-<form action = "questionnaire_results" method = "get">
+<form action = "questionnaire_results" method = "post">
 @csrf
     <p style="font-size:70px; text-align:center; color:#000000;">Q.岡山県内の方で２週間以内に県外に外出しましたか？<br>
     <input type="radio" style="width:40px; height:40px;" name="student" value="1" required="required" >はい<br>
