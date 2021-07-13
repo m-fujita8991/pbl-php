@@ -2,6 +2,9 @@
 @section('title','list')
 @section('content')
 <input type="date">
+<a href="download.php">
+    <button>csvダウンロード</button>
+</a>
 <div class="tab_wrap">
 	<input id="tab1" type="radio" name="tab_btn" checked>
 	<input id="tab2" type="radio" name="tab_btn">
@@ -29,5 +32,5 @@
 @section('footer','')
 <footer>
    <div class = 'footer'></div>
-   <button onclick="history.back()" >戻る</button>
+   <button onclick="history.back()" style="position: absolute; left: 75%; top: 80%; width:75px; height:35px; font-size:20px;">戻る</button>
 </footer>
