@@ -30,7 +30,7 @@ Route::post('questionnaire_results',[pblcontroller::class,'questionnaire_results
 Route::get('sankasyaNo',[pblcontroller::class,'sankasyaNo']);
 
 //参加票　入力画面
-Route::get('sankahyou',[pblcontroller::class,'sankahyou']);
+Route::post('sankahyou',[pblcontroller::class,'sankahyou']);
 
 //参加票　確認画面
 Route::get('sankahyoukakunin',[pblcontroller::class,'sankahyoukakunin']);
