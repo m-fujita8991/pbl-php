@@ -41,4 +41,14 @@ class pblcontroller extends Controller
         return view('student.sankahyou');
 
     }
+
+    public function sankahyoukakunin(){
+        return view('student.sankahyoukakunin');
+
+    }
+
+    public function koutuuhi(){
+        return view('student.koutuuhi');
+
+    }
 }
