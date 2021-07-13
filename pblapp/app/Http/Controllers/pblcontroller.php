@@ -1,8 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Area;
+use App\Models\Cnt;
+use App\Models\Humcnt;
+use App\Models\Login;
+use App\Models\Reception;
+use App\Models\School;
+use App\Models\Type;
+use App\Models\User2;
+use App\Models\Yn;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class pblcontroller extends Controller
 {
@@ -37,9 +46,11 @@ class pblcontroller extends Controller
 
     }
 
-    public function sankahyou(){
-        return view('student.sankahyou');
-
+    public function sankahyou(Request $request){
+        // $item = User2::where('sankasyananba',$request->name)->first();
+        $item = DB::select('select * from people');
+        $param =['item'=>$item,];
+        return view('student.sankahyou',$param);
     }
 
     public function sankahyoukakunin(){
