@@ -12,7 +12,7 @@
 @section('content')
     <p class ="alert">{{$msg}}</p>
     <form>
-    <input type="checkbox" style="width:40px; height:40px;" value="1">確認しました。
+    <input type="checkbox"  style="width:40px; height:40px; font-size:25px; position: absolute; left: 48%; top: 47%; " value="1"> 確認しました。  
     </form>
     @endsection
 @section('footer')
