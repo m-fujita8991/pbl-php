@@ -39,7 +39,5 @@ Route::get('sankahyoukakunin',[pblcontroller::class,'sankahyoukakunin']);
 Route::get('koutuuhi',[pblcontroller::class,'koutuuhi']);
 
 //受付終了画面（交通費対象）
-Route::get('uketukeowari',[pblcontroller::class,'uketukeowari']);
+Route::post('uketukeowari',[pblcontroller::class,'uketukeowari']);
 
-//交通費対象選択画面　（交通費対象外）
-Route::get('uketukeowari2',[pblcontroller::class,'uketukeowari2']);
