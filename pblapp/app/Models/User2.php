@@ -13,4 +13,22 @@ class User2 extends Model
     {
         return $this -> sankasyananba.$this -> sankasyagakka.$this -> gakkoumei.$this -> gakunen.$this -> kisotu.$this -> full.$this -> name.$this -> name_hurigana.$this -> sankakaisuu.$this -> taisyounendo.$this -> gohitensuu.$this -> memo.$this -> birth;
     }
+    public function getsankasyaNO(){
+        return $this->sankasyananba;
+    }
+    public function getName(){
+        return $this->name;
+    }
+    public function getHurigana(){
+        return $this->name_hurigana;
+    }
+    public function getGakkoumei(){
+        return $this->gakkoumei;
+    }
+    public function getBirth(){
+        return $this->birth;
+    }
+    public function getKisotu(){
+        return $this->kisotu;
+    }
 }
