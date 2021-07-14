@@ -47,8 +47,9 @@ class pblcontroller extends Controller
     }
 
     public function sankahyou(Request $request){
-        // $item = User2::where('sankasyananba',$request->name)->first();
-        $item = DB::select('select * from people');
+        $item = User2::where('sankasyananba',$request->name)->first();
+        //$item = User2::select('select * from tbl_user');
+        //$item = User2::all();
         $param =['item'=>$item,];
         return view('student.sankahyou',$param);
     }
