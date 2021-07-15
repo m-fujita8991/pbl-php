@@ -11,7 +11,7 @@ class User2 extends Model
     protected $table = 'tbl_user';
     public function getData()
     {
-        return $this -> sankasyananba.$this -> sankasyagakka.$this -> gakkoumei.$this -> gakunen.$this -> kisotu.$this -> full.$this -> name.$this -> name_hurigana.$this -> sankakaisuu.$this -> taisyounendo.$this -> gohitensuu.$this -> memo.$this -> birth;
+        return $this -> sankasyananba. ',' .$this -> sankasyagakka. ',' .$this -> gakkoumei. ',' .$this -> gakunen. ',' .$this -> kisotu. ',' .$this -> full. ',' .$this -> name. ',' .$this -> name_hurigana. ',' .$this -> sankakaisuu. ',' .$this -> taisyounendo. ',' .$this -> gohitensuu. ',' .$this -> memo. ',' .$this -> birth;
     }
     public function getsankasyaNO(){
         return $this->sankasyananba;
