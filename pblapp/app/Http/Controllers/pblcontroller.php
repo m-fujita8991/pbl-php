@@ -49,16 +49,20 @@ class pblcontroller extends Controller
     public function sankahyou(Request $request){
         if($request->student == 1){
             //参加者ナンバー自動生成
+            $param =['item'=>'',];
+            return view('student.sankahyou',$param);
         }elseif($request->student == 0){
             $matchThese = ['sankasyananba' => $request->name,'birth' => $request->calendar];
             $item = User2::where($matchThese)->first();
-            //$item = User2::select('select * from tbl_user');
-            //$item = User2::all();
+            if($item == null){
+                return redirect('sankasyaNo');
+            }
             $param =['item'=>$item,];
             return view('student.sankahyou',$param);
         }
     }
-
+            //$item = User2::select('select * from tbl_user');
+            //$item = User2::all();
     public function sankahyoukakunin(){
         return view('student.sankahyoukakunin');
 
