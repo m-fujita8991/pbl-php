@@ -63,4 +63,9 @@ class pblcontroller extends Controller
         return view('student.koutuuhi');
 
     }
+
+    public function uketukeowari(){
+        return view('student.uketukeowari');
+
+    }
 }
