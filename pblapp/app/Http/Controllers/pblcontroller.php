@@ -73,8 +73,10 @@ class pblcontroller extends Controller
 
     }
 
-    public function uketukeowari(){
-        return view('student.uketukeowari');
+    public function uketukeowari(Request $request){
+        $value = $request->student;
+        $param = ['value'=>$value];
+        return view('student.uketukeowari',$param);
 
     }
 }
