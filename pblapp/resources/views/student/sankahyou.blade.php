@@ -1,7 +1,6 @@
 @extends('layout.student_temp')
 @section('title','参加票　入力画面')
 @section('content')
-{{ $item -> getData() }}
 <form>
 @csrf
 <p style="font-size:50px; color:#000000; text-align:center">参加者No {{$item -> getsankasyaNO()}}</p>
