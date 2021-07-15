@@ -13,7 +13,7 @@ class teacherController extends Controller
 
     public function list(){
         return view('teacher.list');
-
+        
     }
 
     public function confirm(){
