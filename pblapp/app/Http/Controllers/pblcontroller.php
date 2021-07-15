@@ -47,12 +47,22 @@ class pblcontroller extends Controller
     }
 
     public function sankahyou(Request $request){
-        // $item = User2::where('sankasyananba',$request->name)->first();
-        $item = DB::select('select * from people');
-        $param =['item'=>$item,];
-        return view('student.sankahyou',$param);
+        if($request->student == 1){
+            //参加者ナンバー自動生成
+            $param =['item'=>'',];
+            return view('student.sankahyou',$param);
+        }elseif($request->student == 0){
+            $matchThese = ['sankasyananba' => $request->name,'birth' => $request->calendar];
+            $item = User2::where($matchThese)->first();
+            if($item == null){
+                return redirect('sankasyaNo');
+            }
+            $param =['item'=>$item,];
+            return view('student.sankahyou',$param);
+        }
     }
-
+            //$item = User2::select('select * from tbl_user');
+            //$item = User2::all();
     public function sankahyoukakunin(){
         return view('student.sankahyoukakunin');
 
@@ -60,6 +70,13 @@ class pblcontroller extends Controller
 
     public function koutuuhi(){
         return view('student.koutuuhi');
+
+    }
+
+    public function uketukeowari(Request $request){
+        $value = $request->student;
+        $param = ['value'=>$value];
+        return view('student.uketukeowari',$param);
 
     }
 }
