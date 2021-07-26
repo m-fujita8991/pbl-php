@@ -22,8 +22,9 @@ class teacherController extends Controller
     }
 
     public function list(){
-        $item = User2::get();
-        $param =['item'=>$item,];
+        $item1 = User2::all();
+        $item2 = Humcnt::all();
+        $param =['item1'=>$item1,'item2'=>$item2];
         return view('teacher.list',$param);
     }
 

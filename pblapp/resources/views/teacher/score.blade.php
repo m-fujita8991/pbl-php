@@ -42,7 +42,7 @@
     <p style="position: absolute; left: 66%; top: 38.5%;">不合格の理由を記入してください</p>
     <textarea name="reason" style="position: absolute; left: 66%; top: 51.5%; width:300px; height:200px; font-size:20px;"></textarea>
     
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         no1 = document.getElementById('number1').value;
         no2 = document.getElementById('number2').value;
         no3 = document.getElementById('number3').value;
@@ -58,11 +58,11 @@
             document.getElementById('otherID').value = "";
             document.getElementById('textError').style.display = "none";
         }
-    </script>
+    </script> -->
 @endsection
 @section('footer','')
 <footer>
    <div class = 'footer'></div>
-   <button onclick="history.back()" style="position: absolute; left: 43%; top: 90%; width:63px; height:30px; font-size:15px;">戻る</button>
+   <button onclick="location.href='list'" style="position: absolute; left: 43%; top: 90%; width:63px; height:30px; font-size:15px;">戻る</button>
    <button onclick="location.href='list'" style="position: absolute; left: 53%; top: 90%; width:63px; height:30px; font-size:15px;">決定</button>
 </footer>
