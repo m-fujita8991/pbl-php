@@ -29,11 +29,6 @@
         }
 </script>
 
-<!-- csv -->
-<a href="download.php">
-    <button style="position: absolute; left: 79%;">csvダウンロード</button>
-</a>
-
 <!-- table -->
 <div class="tab_wrap">
 	<input id="tab1" type="radio" name="tab_btn" checked>
@@ -47,11 +42,25 @@
 		<div id="panel1" class="tab_panel">
 			<table border="1" style="border-collapse: collapse">
 				<tr>
-					<th>名前</th> <th>学校</th> <th>学年</th> <th>希望学科</th> <th>コース</th> <th>参加回数</th> <th>受付番号</th> <th>合否</th>
+					<th>名前</th> <th>学校</th> <th>学年</th> <th>希望学科</th> <th>コース</th> <th>参加回数</th> <th>受付番号</th> <th>既卒</th> <th>合否</th>
 				</tr>
-				<tr>
-					
-				</tr>
+				@foreach ($item1 as $item)
+					<tr>
+						<td>
+							<button onclick="location.href='confirm'">{{$item->name}}</button>
+						</td>
+						<td>{{$item->gakkoumei}}</td>
+						<td>{{$item->gakunen}}</td>
+						<td>{{$item->sankasyagakka}}</td>
+						<td>{{$item->full}}</td>
+						<td>{{$item->sankakaisuu}}</td>
+						<td>{{$item->sankasyananba}}</td>
+						<td>{{$item->kisotu}}</td>
+						<td>
+							合否点数：<button onclick="location.href='download.php'">{{$item->gohitensuu}}</button>
+						</td>
+					</tr>
+				@endforeach
 			</table>
 		</div>
 		<div id="panel2" class="tab_panel">
@@ -59,9 +68,15 @@
 				<tr>
 					<th>学科</th> <th>合計</th> <th>３年生以上</th> <th>２年生</th> <th>１年生</th>
 				</tr>
-				<tr>
-						
-				</tr>
+				@foreach ($item2 as $item)
+					<tr>
+						<td>{{$item->sankasyagakka}}</td>
+						<td>{{$item->sannen}}</td>
+						<td>{{$item->ninen}}</td>
+						<td>{{$item->itinen}}</td>
+						<td>{{$item->goukei}}</td>
+					</tr>
+				@endforeach
 			</table>
 		</div>
 	</div>
