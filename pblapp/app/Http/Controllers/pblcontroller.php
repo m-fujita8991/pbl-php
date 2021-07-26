@@ -45,11 +45,20 @@ class pblcontroller extends Controller
         return view('student.sankasyaNo');
 
     }
-
     public function sankahyou(Request $request){
         if($request->student == 1){
             //参加者ナンバー自動生成
-            $param =['item'=>'',];
+            $number = 'OC';
+            $now = date('Ymj',time());
+            $fp = fopen( "data.txt", "r");
+            $data = fgets($fp);
+            fclose($fp);
+            $fx = fopen( "data.txt","w");
+            $data++;
+            fwrite($fx,$data);
+            fclose($fx);
+            $number = $number.$now.sprintf('%03d',$data);
+            $param =['item'=>"",'number'=>$number];
             return view('student.sankahyou',$param);
         }elseif($request->student == 0){
             $matchThese = ['sankasyananba' => $request->name,'birth' => $request->calendar];
