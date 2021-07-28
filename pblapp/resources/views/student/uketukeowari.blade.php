@@ -3,7 +3,7 @@
 @section('content')
 <form action = "participant" method = "get">
 @csrf
-@if($value != '0')
+@if($value != '1')
         <p style="font-size:70px; text-align:center; color:#000000;">受付終了です。<br>各教室に移動してください</p>
         <p >受付番号：0120</p>
         <p style="font-size:70px; text-align:center; color:#000000;">＊受付番号は控えてください</p>
