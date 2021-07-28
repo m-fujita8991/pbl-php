@@ -1,6 +1,13 @@
 <html>
 <head>
   @yield('header')
+  <style>
+        p.alert {
+            font-size:50pt;
+            color:red;
+            text-align:center;
+        }
+    </style>
   <link rel="stylesheet" href="../resources/css/student.css">
   <title>@yield('title')</title>
 </head>
