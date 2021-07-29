@@ -10,7 +10,7 @@ Route::get('login',[teachercontroller::class,'login']);
 //list
 Route::get('list',[teachercontroller::class,'list']);
 //confirm
-Route::get('confirm',[teachercontroller::class,'confirm']);
+Route::post('confirm',[teachercontroller::class,'confirm']);
 //score
 Route::get('score',[teachercontroller::class,'score']);
 

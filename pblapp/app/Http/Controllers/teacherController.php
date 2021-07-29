@@ -28,8 +28,10 @@ class teacherController extends Controller
         return view('teacher.list',$param);
     }
 
-    public function confirm(){
-        return view('teacher.confirm');
+    public function confirm(Request $request){
+        $item = User2::where("sankasyananba",$request->hide)->first();
+        $param = ["item" => $item];
+        return view('teacher.confirm',$param);
 
     }
 

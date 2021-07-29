@@ -47,12 +47,16 @@
 				@foreach ($item1 as $item)
 					<tr>
 						<td>
-							<button onclick="location.href='confirm'">{{$item->name}}</button>
+						<form action = "confirm" method = "post">
+							@csrf
+							<input type = "hidden" name = "hide" value = "{{$item->sankasyananba}}">
+							<input type = "submit" value="{{$item->name}}">
+						</form>
 						</td>
 						<td>{{$item->gakkoumei}}</td>
 						<td>{{$item->gakunen}}</td>
 						<td>{{$item->sankasyagakka}}</td>
-						<td>{{$item->full}}</td>
+						<td>{{$item->ko_su}}</td>
 						<td>{{$item->sankakaisuu}}</td>
 						<td>{{$item->sankasyananba}}</td>
 						<td>{{$item->kisotu}}</td>
