@@ -29,10 +29,21 @@ class teacherController extends Controller
     }
 
     public function confirm(Request $request){
+        if($request->hidden == 1){
         $item = User2::where("sankasyananba",$request->hide)->first();
         $param = ["item" => $item];
         return view('teacher.confirm',$param);
-
+        }else{
+            $text = $request->note;
+            $user = User2::where('sankasyananba',$request->hide)->first();
+            $user->memo = $text;
+            $user->timestamps = false; 
+            $user->save();
+            $item1 = User2::all();
+            $item2 = Humcnt::all();
+            $param =['item1'=>$item1,'item2'=>$item2];
+            return view('teacher.list',$param);
+        }
     }
 
     public function score(){

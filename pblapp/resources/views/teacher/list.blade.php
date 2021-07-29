@@ -49,6 +49,7 @@
 						<td>
 						<form action = "confirm" method = "post">
 							@csrf
+							<input type = "hidden" name = "hidden" value = "1">
 							<input type = "hidden" name = "hide" value = "{{$item->sankasyananba}}">
 							<input type = "submit" value="{{$item->name}}">
 						</form>
