@@ -33,7 +33,7 @@ Route::get('sankasyaNo',[pblcontroller::class,'sankasyaNo']);
 Route::post('sankahyou',[pblcontroller::class,'sankahyou']);
 
 //参加票　確認画面
-Route::get('sankahyoukakunin',[pblcontroller::class,'sankahyoukakunin']);
+Route::post('sankahyoukakunin',[pblcontroller::class,'sankahyoukakunin']);
 
 //交通費対象選択画面
 Route::get('koutuuhi',[pblcontroller::class,'koutuuhi']);

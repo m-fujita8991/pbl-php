@@ -50,6 +50,7 @@ class pblcontroller extends Controller
             //参加者ナンバー自動生成
             $number = 'OC';
             $now = date('Ymj',time());
+            $now1 = date('Y-m-j',time());
             $fp = fopen( "data.txt", "r");
             $data = fgets($fp);
             fclose($fp);
@@ -58,23 +59,56 @@ class pblcontroller extends Controller
             fwrite($fx,$data);
             fclose($fx);
             $number = $number.$now.sprintf('%03d',$data);
-            $param =['item'=>"",'number'=>$number];
+            $school = School::where('kenmei','岡山県')->get();
+            $department = Type::all();
+            $param =['item'=>"",'number'=>$number,'now' => $now1,'school'=>$school,'department'=>$department];
             return view('student.sankahyou',$param);
         }elseif($request->student == 0){
+            $now1 = date('Y-m-j',time());
             $matchThese = ['sankasyananba' => $request->name,'birth' => $request->calendar];
+            $department = Type::all();
             $item = User2::where($matchThese)->first();
             if($item == null){
                 return redirect('sankasyaNo');
             }
-            $param =['item'=>$item,];
+            $param =['item'=>$item,'now'=>$now1,'department'=>$department];
             return view('student.sankahyou',$param);
         }
     }
             //$item = User2::select('select * from tbl_user');
             //$item = User2::all();
-    public function sankahyoukakunin(){
-        return view('student.sankahyoukakunin');
+    public function sankahyoukakunin(Request $request){
+        if($request->hide ==0){
+            $user = new User2;
+            $user->sankasyananba =$request->number;
+            $user->sankasyagakka =$request->gakka;
+            $user->gakkoumei =$request->school;
+            $user->gakunen =$request->grade;
+            $user->kisotu =$request->department;
+            $user->ko_su=$request->course;
+            $user->name =$request->name;
+            $user->name_hurigana=$request->hurigana;
+            $user->sankakaisuu=1;
+            //生徒の対象年度のプログラム必要
+            $user->taisyounendo =2021;
+            $user->gohitensuu =0;
+            $user->memo ="";
+            $user->birth =$request->birth;
+            $user->timestamps = false; 
+            $user ->save();
+        }else{
+            
+            $user = User2::where('sankasyananba',$request->number)->first();
+            // var_dump($user);
+            $user->gakunen = $request->grade;
+            $user->sankasyagakka =$request->gakka;
+            $user->ko_su=$request->course;
+            $user->timestamps = false; 
+            $user->save();
 
+        }
+        $param =['item'=>$user];
+        return view('student.sankahyoukakunin',$param);
     }
 
     public function koutuuhi(){

@@ -10,6 +10,9 @@ class User2 extends Model
 {
     use HasFactory;
     protected $table = 'tbl_user';
+    protected $primaryKey = 'sankasyananba';
+    protected $keyType = 'string';
+    public $incrementing = false;
     public function getData1()
     {
         return $this -> sankasyananba. ',' .$this -> sankasyagakka. ',' .$this -> gakkoumei. ',' .$this -> gakunen. ',' .$this -> kisotu. ',' .$this -> full. ',' .$this -> name. ',' .$this -> name_hurigana. ',' .$this -> sankakaisuu. ',' .$this -> taisyounendo. ',' .$this -> gohitensuu. ',' .$this -> memo. ',' .$this -> birth;
