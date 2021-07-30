@@ -118,7 +118,8 @@ class pblcontroller extends Controller
 
     public function uketukeowari(Request $request){
         $value = $request->student;
-        $param = ['value'=>$value];
+        $kenmei = $request->name;
+        $param = ['value'=>$value,'name'=>$kenmei];
         return view('student.uketukeowari',$param);
 
     }

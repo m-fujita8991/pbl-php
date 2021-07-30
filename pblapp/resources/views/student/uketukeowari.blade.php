@@ -8,7 +8,7 @@
         <p style="font-size:50px; text-align:center; color:#000000;">受付番号：0120</p>
         <p style="font-size:60px; text-align:center; color:#ff0000;">＊受付番号は控えてください</p>
         @else
-        <p style="font-size:40px; text-align:center; color:#000000;">広島県広島市</p>
+        <p style="font-size:40px; text-align:center; color:#000000;">{{$name}}</p>
         <p style="font-size:50px; text-align:center; color:#ff0000;">交通費対象地域です</p>
         <p style="font-size:50px; text-align:center; color:#000000;">交通費精算受付にお越しください</p>
         <p style="font-size:40px; text-align:center; color:#000000;">受付番号：0120</p>
