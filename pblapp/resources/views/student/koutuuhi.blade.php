@@ -6,9 +6,10 @@
     <p style="font-size:70px; text-align:center; color:#000000;">
     <input type="radio" style="width:40px; height:40px;" name="student" value="0" required="required">岡山県内からお越しの方<br>
        <select name="tiikimei" style=" font-size:30px; width:300px; height:50px;">
-          <option value="岡山市" >岡山市</option>
-          <option value="選択肢2">選択肢2</option>
-          <option value="選択肢3">選択肢3</option>
+          <option value="岡山市">岡山市</option>
+          <option value="倉敷市">倉敷市</option>
+          <option value="総社市">総社市</option>
+          <option value="玉野市">玉野市</option>
        </select><br><br>
     <input type="radio" style="width:40px; height:40px;" name="student" value="1" required="required">岡山県外からお越しの方<br>
     <input type="text" name="name" value="" maxlength="15" style="font-size:70px; width: 1000px; height: 70px;">
